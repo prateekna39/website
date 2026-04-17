@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Background Image */
+.main-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Daily Bugle Header Style */
+.bugle-header {
+    border-bottom: 4px double #fff;
+    border-top: 4px double #fff;
+    padding: 20px 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.logo-text {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    text-transform: uppercase;
+    color: #e62429;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: #ccc;
+    border-top: 1px solid #444;
+    padding-top: 5px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.bugle-card {
+    background: #fff; /* Newspaper paper look */
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 10px 10px 0px #e62429;
+    transition: transform 0.3s ease;
+}
+
+.bugle-card:hover {
+    transform: rotate(-2deg) scale(1.05);
+}
+
+.image-frame {
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    line-height: 0;
+    border: 2px solid #000;
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto; /* Fixes the zoom issue */
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.image-frame img:hover {
+    filter: sepia(1) saturate(2) hue-rotate(-50deg); /* Spidey-red tint on hover */
+}
+
+.caption {
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    border-top: 2px solid #000;
+    padding-top: 5px;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+.lightbox-img {
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    margin: 10vh auto;
+    border: 10px solid #fff;
+    box-shadow: 0 0 30px rgba(230, 36, 41, 0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px; right: 40px;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+}
