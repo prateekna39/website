@@ -21,28 +21,34 @@
             </div>
         </header>
 
-        <section class="gallery-grid">
-            <div class="bugle-card">
-                <div class="image-frame">
-                    <img src="image1.png" alt="Spider-Man Shot" class="clickable">
-                </div>
-                <p class="caption">"THREAT OR MENACE?"</p>
+    <section class="gallery-grid">
+    <div class="bugle-card">
+        <a href="https://www.smartcampus-plus.xyz/" target="_blank" class="card-link">
+            <div class="image-frame">
+                <img src="image1.png" alt="Spider-Man Shot">
             </div>
+            <p class="caption">"THREAT OR MENACE?"</p>
+        </a>
+    </div>
 
-            <div class="bugle-card">
-                <div class="image-frame">
-                    <img src="image2.jpeg" alt="Spider-Man Shot" class="clickable">
-                </div>
-                <p class="caption">WEB-SLINGER SPOTTED</p>
+    <div class="bugle-card">
+        <a href="https://github.com/prateekna39" target="_blank" class="card-link">
+            <div class="image-frame">
+                <img src="image2.jpeg" alt="Spider-Man Shot">
             </div>
+            <p class="caption">WEB-SLINGER SPOTTED</p>
+        </a>
+    </div>
 
-            <div class="bugle-card">
-                <div class="image-frame">
-                    <img src="image3.jpg" alt="Spider-Man Shot" class="clickable">
-                </div>
-                <p class="caption">EXCLUSIVE FOOTAGE</p>
+    <div class="bugle-card">
+        <a href="https://www.youtube.com/watch?v=Aq5WXmQQooo" target="_blank" class="card-link">
+            <div class="image-frame">
+                <img src="image3.jpg" alt="Spider-Man Shot">
             </div>
-        </section>
+            <p class="caption">EXCLUSIVE FOOTAGE</p>
+        </a>
+    </div>
+    </section>
     </main>
 
     <div id="lightbox" class="lightbox">
@@ -51,5 +57,13 @@
     </div>
 
     <script src="script.js"></script>
+    <audio id="bg-music" loop>
+    <source src="music1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+
+    <div id="music-control" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; cursor: pointer; background: rgba(230, 36, 41, 0.8); padding: 10px; border-radius: 50%; color: white; font-weight: bold;">
+    🎵
+</div>
 </body>
 </html>

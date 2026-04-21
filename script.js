@@ -1,23 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const lightbox = document.getElementById('lightbox');
-    const fullImg = document.getElementById('full-img');
-    const closeBtn = document.querySelector('.close-btn');
-    const images = document.querySelectorAll('.clickable');
+    const music = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('music-control');
+    let isPlaying = false;
 
-    images.forEach(img => {
-        img.addEventListener('click', () => {
-            lightbox.style.display = 'block';
-            fullImg.src = img.src;
-        });
+    // 1. Play music on first click (Browsers block auto-play)
+    document.body.addEventListener('click', () => {
+        if (!isPlaying) {
+            music.play();
+            isPlaying = true;
+        }
+    }, { once: true });
+
+    // 2. Stop music when tab is switched
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+            music.pause();
+        } else {
+            // Only resume if it was playing before the tab was switched
+            if (isPlaying) {
+                music.play();
+            }
+        }
     });
 
-    closeBtn.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target !== fullImg) {
-            lightbox.style.display = 'none';
+    // 3. Manual toggle button
+    musicBtn.addEventListener('click', () => {
+        if (music.paused) {
+            music.play();
+            isPlaying = true;
+            musicBtn.style.opacity = "1";
+        } else {
+            music.pause();
+            isPlaying = false;
+            musicBtn.style.opacity = "0.5";
         }
     });
 });
