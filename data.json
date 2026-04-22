@@ -1,0 +1,26 @@
+{
+  "skills": {
+    "keywords": ["skill", "tech", "language", "stack", "know", "code"],
+    "response": "Prateek is highly skilled in Python, Java, JavaScript, C++, Next.js, Flask, MongoDB, and PyTorch for AI/ML!"
+  },
+  "education": {
+    "keywords": ["education", "university", "degree", "study", "college", "cgpa"],
+    "response": "He is currently pursuing his B.Tech CSE in Artificial Intelligence at Bennett University, holding a strong 7/10 CGPA."
+  },
+  "projects": {
+    "keywords": ["project", "work", "build", "portfolio", "made", "app"],
+    "response": "He has built complex systems like an AI Stock Predictor, the SmartCampus+ portal, and a Disaster Response Platform using Next.js and MongoDB."
+  },
+  "contact": {
+    "keywords": ["contact", "hire", "email", "number", "phone", "reach", "call"],
+    "response": "You can reach him directly at prateeknarang.79@gmail.com or call +91 9992066033. You can also use the contact form on this page!"
+  },
+  "certifications": {
+    "keywords": ["certif", "course", "learn", "achieve"],
+    "response": "He has over 10 global certifications from Google, Coursera, and Infosys, covering AI, Java, Networking, and Operating Systems."
+  },
+  "default": {
+    "keywords": [],
+    "response": "I'm a simple AI. I know Prateek is a phenomenal developer! Try asking specifically about his 'skills', 'education', or 'projects'."
+  }
+}
