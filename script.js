@@ -340,7 +340,7 @@ hoverElements.forEach(el => {
    12. THE MATRIX EASTER EGG
    ========================================= */
 let secretCode = '';
-const matrixTrigger = 'ai';
+const matrixTrigger = 'pn';
 
 document.addEventListener('keydown', (e) => {
     // Record the keys pressed
@@ -363,7 +363,7 @@ document.addEventListener('keydown', (e) => {
         setTimeout(() => {
             document.body.classList.remove('matrix-mode');
             particlesArray.forEach(p => p.color = '#00f0ff');
-        }, 5000);
+        }, 10000);
     }
 });
 
